@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="DishBurger.Controllers.AccountController" Collapsed="true">
+    <Position X="17.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABCAAIAAABACAAABAAAIAAAABAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Controllers\AccountController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Controllers.DishesController" Collapsed="true">
+    <Position X="28.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABgAAQAAAAAAAAAAAAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\DishesController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Controllers.DrinksController" Collapsed="true">
+    <Position X="19.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABgAAQAAAAAAAAAAAAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\DrinksController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Controllers.HomeController" Collapsed="true">
+    <Position X="23" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAQAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\HomeController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Controllers.OrdersController" Collapsed="true">
+    <Position X="23" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAQgAFAAAAAAgAgAAAAAAEAAAAAAAE=</HashCode>
+      <FileName>Controllers\OrdersController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Controllers.RestaurantsController" Collapsed="true">
+    <Position X="21.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABBAAAQAAAAAAAAAAEAAEACAAEAAAAAAAA=</HashCode>
+      <FileName>Controllers\RestaurantsController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.Base.EntityBaseRepository&lt;T&gt;" Collapsed="true">
+    <Position X="10.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAABAAAAAAAAAEAAAAAAAgAAAAAAAAAIIA=</HashCode>
+      <FileName>Data\Base\EntityBaseRepository.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DishBurger.Data.Cart.ShoppingCart" Collapsed="true">
+    <Position X="23" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgABAAAQBAIAEgAAAAAAgAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Data\Cart\ShoppingCart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.AppDbContext" Collapsed="true">
+    <Position X="19.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAABABCAkAAAAAAAQAACAAFAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Data\AppDbContext.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.AppDbInitializer" Collapsed="true">
+    <Position X="21.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\AppDbInitializer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.Services.AuthorizeService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\AuthorizeService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DishBurger.Data.Services.DishesService" Collapsed="true">
+    <Position X="6.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAABAAAABAIAABBAAgAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Data\Services\DishesService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DishBurger.Data.Services.DrinksService" Collapsed="true">
+    <Position X="8.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAAAFAAAAAAAAABAAAAAAAAQAAABAAAAAEA=</HashCode>
+      <FileName>Data\Services\DrinksService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DishBurger.Data.Services.HomeService" Collapsed="true">
+    <Position X="10.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAABAAAAAAAAABAAAAABAAAAAAgAAAQAAA=</HashCode>
+      <FileName>Data\Services\HomeService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DishBurger.Data.Services.IngredientsService" Collapsed="true">
+    <Position X="13" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\IngredientsService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DishBurger.Data.Services.OrdersService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAABAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\OrdersService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DishBurger.Data.Services.RestaurantsService" Collapsed="true">
+    <Position X="15.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\RestaurantsService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="DishBurger.Data.Services.SortService" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\SortService.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DishBurger.Data.Static.JwtToken" Collapsed="true">
+    <Position X="19.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAQAAAIAAgAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Data\Static\JwtToken.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.Static.PageInfo" Collapsed="true">
+    <Position X="26.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAgAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Static\PageInfo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.Static.UserRoles" Collapsed="true">
+    <Position X="21.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Static\UserRoles.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.ViewComponents.ShoppingCartSummary" Collapsed="true">
+    <Position X="26.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ViewComponents\ShoppingCartSummary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.ViewModels.LoginVM" Collapsed="true">
+    <Position X="21.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAgAAAAA=</HashCode>
+      <FileName>Data\ViewModels\LoginVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.ViewModels.NewDishDropdownsVM" Collapsed="true">
+    <Position X="24.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\ViewModels\NewDishDropdownsVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.ViewModels.NewDrinkDropdownsVM" Collapsed="true">
+    <Position X="28.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Data\ViewModels\NewDrinkDropdownsVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.ViewModels.NewDrinkVM" Collapsed="true">
+    <Position X="17.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAAAAAABAAAAAQABAEAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Data\ViewModels\NewDrinkVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.ViewModels.RegisterVM" Collapsed="true">
+    <Position X="17.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAACAAAAAgAAIAA=</HashCode>
+      <FileName>Data\ViewModels\RegisterVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Data.ViewModels.ShoppingCartVM" Collapsed="true">
+    <Position X="28.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Data\ViewModels\ShoppingCartVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Models.NewDishVM" Collapsed="true">
+    <Position X="26.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAgAAAABAAAAEQAAAAAACAAAAAEAAAAAAA=</HashCode>
+      <FileName>Data\ViewModels\NewDishVM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Models.ApplicationUser" Collapsed="true">
+    <Position X="23" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ApplicationUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Models.Dish" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="26.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAACAAAACAAgAAAAAAAAAAAAAQAAACAAAAAEAAAAAAA=</HashCode>
+      <FileName>Models\Dish.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DishBurger.Models.Drink" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="17.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgCAAAAAAAAAAAAAAAAAAAABQEAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Models\Drink.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DishBurger.Models.ErrorViewModel" Collapsed="true">
+    <Position X="21.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ErrorViewModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Models.Ingredient" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="24.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAQCAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Ingredient.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DishBurger.Models.Ingredient_Dish" Collapsed="true">
+    <Position X="26.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAgAAAAAAAAAAAAAAAAAEAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Models\Ingredient_Dish.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Models.ItemEntity" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="28.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAwgAAAAABAAAAAQAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Models\ItemEntity.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DishBurger.Models.Jwtmodel" Collapsed="true">
+    <Position X="17.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\JwtModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Models.Manufacturer" Collapsed="true">
+    <Position X="23" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAgAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Manufacturer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Models.Order" Collapsed="true">
+    <Position X="19.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADAAAAACEAAAAAAAAAAAgAAAAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Models\Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Models.OrderItem" Collapsed="true">
+    <Position X="21.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAECAAAAAQAAAAAAAAAAAACAAQAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Models\OrderItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Models.Restaurant" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="19.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAQAAAAAgAAAAAAQAAAQAAAAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>Models\Restaurant.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="DishBurger.Models.ShoppingCartItem" Collapsed="true">
+    <Position X="24.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAEAAAAACEAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Models\ShoppingCartItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Program" Collapsed="true">
+    <Position X="28.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DishBurger.Startup" Collapsed="true">
+    <Position X="19.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAgAAACAAAAAA=</HashCode>
+      <FileName>Startup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="DishBurger.Data.Base.IEntityBase" Collapsed="true">
+    <Position X="19.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Base\IEntityBase.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DishBurger.Data.Base.IEntityBaseRepository&lt;T&gt;" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAEAAAAAAAgAAAAAAAAAIIA=</HashCode>
+      <FileName>Data\Base\IEntityBaseRepository.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DishBurger.Data.Services.ServiceInterfaces.IAuthorizeService" Collapsed="true">
+    <Position X="17.75" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\ServiceInterfaces\IAuthorizeService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DishBurger.Data.Services.ServiceInterfaces.IDishesService" Collapsed="true">
+    <Position X="6.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAABAAAAABAAgAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>Data\Services\ServiceInterfaces\IDishesService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DishBurger.Data.Services.ServiceInterfaces.IDrinksService" Collapsed="true">
+    <Position X="8.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAEA=</HashCode>
+      <FileName>Data\Services\ServiceInterfaces\IDrinksService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DishBurger.Data.Services.ServiceInterfaces.IHomeService" Collapsed="true">
+    <Position X="10.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Data\Services\ServiceInterfaces\IHomeService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DishBurger.Data.Services.ServiceInterfaces.IIngredientsService" Collapsed="true">
+    <Position X="13" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\ServiceInterfaces\IIngredientsService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DishBurger.Data.Services.ServiceInterfaces.IOrdersService" Collapsed="true">
+    <Position X="21.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\ServiceInterfaces\IOrdersService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DishBurger.Data.Services.ServiceInterfaces.IRestaurantsService" Collapsed="true">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\ServiceInterfaces\IRestaurantsService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="DishBurger.Data.Services.ServiceInterfaces.ISortService" Collapsed="true">
+    <Position X="23" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Services\ServiceInterfaces\ISortService.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="DishBurger.Data.Cuisine" Collapsed="true">
+    <Position X="18.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEIAAAIAAAAAAAAQAAAAAAAAAAAAAAQAAIAAAAAAAA=</HashCode>
+      <FileName>Data\Enums\Cuisine.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DishBurger.Data.DrinkType" Collapsed="true">
+    <Position X="20" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAAAAAAAAAAAAAAAAACAAYAAAAAAAAA=</HashCode>
+      <FileName>Data\Enums\DrinkType.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DishBurger.Data.Enums.Product" Collapsed="true">
+    <Position X="21.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Data\Enums\Product.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="DishBurger.Data.Enums.SortTypes" Collapsed="true">
+    <Position X="23.5" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAQAAAAAAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>Data\Enums\SortTypes.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

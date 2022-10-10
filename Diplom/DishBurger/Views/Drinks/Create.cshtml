@@ -1,0 +1,74 @@
+﻿@model NewDrinkVM
+@using DishBurger.Data.ViewModels;
+@using DishBurger.Data;
+
+@{
+    ViewData["Title"] = "Create a new drink";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <p>
+            <h4>Create a new dish</h4>
+        </p>
+        <div class="row">
+            <div class="col-md-8 offset-2">
+                <form asp-action="Create">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="Name" class="control-label"></label>
+                                <input asp-for="Name" class="form-control" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Price" class="control-label"></label>
+                                <input asp-for="Price" type="number" class="form-control" />
+                                <span asp-validation-for="Price" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="Volume" class="control-label"></label>
+                                <input asp-for="Volume" type="number" class="form-control" />
+                                <span asp-validation-for="Volume" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="ImageURL" class="control-label"></label>
+                                <input asp-for="ImageURL" class="form-control" />
+                                <span asp-validation-for="ImageURL" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="ManufacturerId" class="control-label"></label>
+                                <select asp-for="ManufacturerId" class="form-control" asp-items="ViewBag.Manufacturers"></select>
+                                <span asp-validation-for="ManufacturerId" class="text-danger"></span>
+                            </div>
+                            <div class="form-group">
+                                <label asp-for="DrinkType" class="control-label"></label>
+                                <select asp-for="DrinkType" class="form-control" asp-items="Html.GetEnumSelectList<DrinkType>()"></select>
+                                <span asp-validation-for="DrinkType" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 offset-4 text-center">
+                        <img width="100%" id="ImageUrlPreview" />
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Create" class="btn btn-outline-success float-right" />
+                        <a class="btn btn-outline-secondary" asp-action="Index">Show all</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $("#ImageURL").on("change", function() {
+            var output = document.getElementById("ImageUrlPreview");
+            output.src = $(this).val();
+        })
+    </script>
+}

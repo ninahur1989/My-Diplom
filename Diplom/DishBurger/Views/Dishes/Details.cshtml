@@ -1,0 +1,50 @@
+﻿@model ItemEntity
+
+@{
+    ViewData["Title"] = "Dish details";
+}
+
+<div class="row">
+    <div class="col-md-8 offset-2">
+        <div class="card mb-12">
+            <div class="row g-0">
+                <div class="col-md-12">
+                    <div class="card-header text-white bg-info">
+                        <p class="card-text">
+                            <h5 class="card-title">
+                                @Model.Name
+                            </h5>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <img src="@Model.ImageURL" width="100%" alt="@Model.Name">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <p class="card-text">@Model.Dish.Description</p>
+                        <p class="card-text">
+                            <b>Restaurant: </b>
+                            <a asp-controller="Restaurants" asp-action="Details" asp-route-id="@Model.Dish.RestaurantId">
+                                @Model.Dish.Restaurant.Name
+                            </a>
+                        </p>
+                        <p class="card-text"><b>Category: </b>@Model.Dish.DishCuisine</p>
+                        <p class="card-text">
+                            <b>Ingredient: </b>
+                            <hr />
+                            <div class="row">
+                                @foreach (var ingredient in Model.Dish.Ingredient_Dish)
+                                {
+                                    <span class="column text-center">
+                                        <a asp-controller="Ingredients" asp-action="Details" asp-route-id="@ingredient.IngredientId">@ingredient.Ingredient.FullName,  </a>
+                                    </span>
+                                }
+                            </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
