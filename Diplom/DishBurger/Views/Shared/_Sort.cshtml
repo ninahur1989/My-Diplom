@@ -1,16 +1,15 @@
 ﻿@using DishBurger.Data.Enums
 @model PagedList.IPagedList<ItemEntity>
-<span>
+<div class="d-flex">
     <form asp-action="Index"
           asp-route-pageNumber="@Model.PageNumber"
           asp-route-SortPage="@SortTypes.Price">
-        <button class="btn btn-primary">Sort by price</button>
+        <button class="btn btn-primary m-sm-1">Sort by price</button>
     </form>
-</span>
-<span>
+
     <form asp-action="Index"
           asp-route-pageNumber="@Model.PageNumber"
           asp-route-SortPage="@SortTypes.Name">
-        <button class="btn btn-primary">Sort by name</button>
+        <button class="btn btn-primary m-sm-1">Sort by name</button>
     </form>
-</span>
+</div>

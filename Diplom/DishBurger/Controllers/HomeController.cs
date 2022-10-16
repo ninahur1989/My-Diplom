@@ -6,12 +6,13 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PagedList;
 using System;
+using System.Globalization;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace DishBurger.Controllers
 {
-
     public class HomeController : Controller
     {
         private int _pageIndex = PageInfo._pageIndex;
@@ -31,6 +32,7 @@ namespace DishBurger.Controllers
 
             var allitems = await _service.GetSortedItemsAsync(SortPage);
             pagedItems = allitems.ToPagedList(_pageIndex, PageInfo._pageSize);
+
             return View(pagedItems);
         }
 
