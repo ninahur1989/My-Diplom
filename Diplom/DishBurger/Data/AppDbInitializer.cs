@@ -2,6 +2,7 @@
 using DishBurger.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,8 +18,7 @@ namespace DishBurger.Data
             {
                 var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
 
-                context.Database.EnsureCreated();
-
+                context.Database.Migrate();
                 if (!context.Restaurants.Any())
                 {
                     context.Restaurants.AddRange(new List<Restaurant>()
@@ -648,8 +648,8 @@ namespace DishBurger.Data
                     });
                     context.SaveChanges();
                 }
-            }
 
+            }
         }
 
         public static async Task SeedUsersAndRolesAsync(IApplicationBuilder applicationBuilder)
