@@ -15,7 +15,13 @@ FROM build AS publish
 RUN dotnet publish "DishBurger.csproj" -c Release -o /app/publish
 
 FROM base AS final
+
+ENV ASPNETCORE_URLS=http://*:8080
+ENV ASPNETCORE_ENVIRONMENT=Development
+
 WORKDIR /app
 COPY --from=publish /app/publish .
+
+EXPOSE 8080
 ENTRYPOINT ["dotnet", "DishBurger.dll"]
 

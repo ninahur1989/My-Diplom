@@ -10,7 +10,9 @@ namespace DishBurger.Data.Services
     {
         public async Task<HttpResponseMessage> GetTokenAsync()
         {
-            var url = "http://localhost:56001/connect/token";
+            var url = "http://localhost:59001/connect/token";
+            //for docker
+            //var url = "http://host.docker.internal:59001/connect/token";
             using var client = new HttpClient();
             client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/x-www-form-urlencoded"));
 

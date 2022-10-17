@@ -28,18 +28,19 @@ namespace DishBurger
 
         public void ConfigureServices(IServiceCollection services)
         {
-            var server = Configuration["DBServer"] ?? "localhost";
-            //var server = Configuration["DBServer"] ?? "ms-sql-server";
-            var port = Configuration["DBPort"] ?? "1433";
-            var user = Configuration["DBUSer"] ?? "SA";
-            var password = Configuration["DBPossword"] ?? "Pa55w0rd2022";
-            var database = Configuration["Database"] ?? "DishBurger2";
+            //for docker
+            //var server = Configuration["DBServer"] ?? "localhost";
+            ////var server = Configuration["DBServer"] ?? "ms-sql-server";
+            //var port = Configuration["DBPort"] ?? "1433";
+            //var user = Configuration["DBUSer"] ?? "SA";
+            //var password = Configuration["DBPossword"] ?? "Pa55w0rd2022";
+            //var database = Configuration["Database"] ?? "DishBurger2";
 
 
 
-            services.AddDbContext<AppDbContext>(options => 
-                options.UseSqlServer($"Server={server},{port};Initial Catalog={database};User ID ={user};Password={password}"));
-            //services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+            //services.AddDbContext<AppDbContext>(options => 
+            //options.UseSqlServer($"Server={server},{port};Initial Catalog={database};User ID ={user};Password={password}"));
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
 
             services.AddScoped<IIngredientsService, IngredientsService>();
             services.AddScoped<IAuthorizeService, AuthorizeService > ();
@@ -63,7 +64,9 @@ namespace DishBurger
             services.AddAuthentication("Bearer")
              .AddJwtBearer("Bearer", options =>
              {
-                 options.Authority = "http://localhost:56001";
+                 options.Authority = "http://localhost:59001";
+                 // for docker
+                 //options.Authority = "http://host.docker.internal:59001/connect/token";
                  options.RequireHttpsMetadata = false;
                  options.TokenValidationParameters = new TokenValidationParameters
                  {
@@ -80,7 +83,6 @@ namespace DishBurger
             {
                 app.UseDeveloperExceptionPage();
             }
-
             else
             {
                 app.UseExceptionHandler("/Home/Error");

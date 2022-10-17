@@ -113,7 +113,7 @@ namespace DishBurger.Controllers
             return View("RegisterCompleted");
         }
 
-        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+        [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
         public async Task<IActionResult> Logout()
         {
             JwtToken.EndSession();

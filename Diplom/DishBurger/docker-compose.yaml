@@ -13,8 +13,9 @@ services:
     environment:
       DBServer: "ms-sql-server"
     ports:
-     - "8080:80"
+     - "8080:8080"
   identity-server: 
-    image: identity-server
+    build: "C:/Users/Admin/Desktop/my-full-shop/IdentityServer/IdentityServer.WebApplication/WebApplication.Testing.Features/"
+    image: "identity1"
     ports:
-     - "59001:59001"
+     - "59001:80"

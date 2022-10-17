@@ -17,8 +17,10 @@ namespace DishBurger.Data
             using (var serviceScope = applicationBuilder.ApplicationServices.CreateScope())
             {
                 var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
+                context.Database.EnsureCreated();
 
-                 context.Database.Migrate();
+                //for docker
+                //context.Database.Migrate();
                 if (!context.Restaurants.Any())
                 {
                     context.Restaurants.AddRange(new List<Restaurant>()
@@ -338,8 +340,35 @@ namespace DishBurger.Data
                                 ManufacturerId = 1,
                                 Volume = 1.5
                             }
+                        },
+                        new ItemEntity()
+                        {
+                            Name = "juice",
+                            Price = 39,
+                            ImageURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1EEEfq_jolW9oNe-QDnZmMIOqv3E0gt88Rg&usqp=CAU",
+                            product = Enums.Product.Drink,
+                            ShortDescription = "the best price ",
+                            Drink = new Drink()
+                            {
+                                DrinkType = DrinkType.WithoutGas,
+                                ManufacturerId = 1,
+                                Volume = 2
+                            }
+                        },
+                        new ItemEntity()
+                        {
+                            Name = "Cudo",
+                            Price = 8,
+                            ImageURL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4vwWs71FsnLWrUBkpad6aVFF5LOAWcT_3sQ&usqp=CAU",
+                            product = Enums.Product.Drink,
+                            ShortDescription = "the best price ",
+                            Drink = new Drink()
+                            {
+                                DrinkType = DrinkType.WithoutGas,
+                                ManufacturerId = 1,
+                                Volume = 0.2
+                            }
                         }
-
                     });
                     context.SaveChanges();
                 }
