@@ -28,8 +28,18 @@ namespace DishBurger
 
         public void ConfigureServices(IServiceCollection services)
         {
+            var server = Configuration["DBServer"] ?? "localhost";
+            //var server = Configuration["DBServer"] ?? "ms-sql-server";
+            var port = Configuration["DBPort"] ?? "1433";
+            var user = Configuration["DBUSer"] ?? "SA";
+            var password = Configuration["DBPossword"] ?? "Pa55w0rd2022";
+            var database = Configuration["Database"] ?? "DishBurger2";
 
-            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
+
+
+            services.AddDbContext<AppDbContext>(options => 
+                options.UseSqlServer($"Server={server},{port};Initial Catalog={database};User ID ={user};Password={password}"));
+            //services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionString")));
 
             services.AddScoped<IIngredientsService, IngredientsService>();
             services.AddScoped<IAuthorizeService, AuthorizeService > ();
@@ -50,16 +60,16 @@ namespace DishBurger
             {
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             });
-            services.AddAuthentication("Bearer")
-             .AddJwtBearer("Bearer", options =>
-             {
-                 options.Authority = "http://localhost:56001";
-                 options.RequireHttpsMetadata = false;
-                 options.TokenValidationParameters = new TokenValidationParameters
-                 {
-                     ValidateAudience = false
-                 };
-             });
+            //services.AddAuthentication("Bearer")
+            // .AddJwtBearer("Bearer", options =>
+            // {
+            //     options.Authority = "http://localhost:56001";
+            //     options.RequireHttpsMetadata = false;
+            //     options.TokenValidationParameters = new TokenValidationParameters
+            //     {
+            //         ValidateAudience = false
+            //     };
+            // });
 
             services.AddControllersWithViews();
         }
@@ -82,12 +92,12 @@ namespace DishBurger
             app.UseRouting();
             app.UseSession();
 
-            app.Use(async (c, n) =>
-            {
-                c.Request.Headers.Add("Authorization", "Bearer " + JwtToken.currentToken);
+            //app.Use(async (c, n) =>
+            //{
+            //    c.Request.Headers.Add("Authorization", "Bearer " + JwtToken.currentToken);
 
-                await n.Invoke();
-            });
+            //    await n.Invoke();
+            //});
 
             app.UseAuthentication();
             app.UseAuthorization();

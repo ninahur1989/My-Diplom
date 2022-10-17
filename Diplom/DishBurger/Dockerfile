@@ -2,15 +2,13 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:5.0 AS base
 WORKDIR /app
-EXPOSE 80
-EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["DishBurger/DishBurger.csproj", "DishBurger/"]
-RUN dotnet restore "DishBurger/DishBurger.csproj"
+COPY ["/DishBurger.csproj", "/"]
+RUN dotnet restore "/DishBurger.csproj"
 COPY . .
-WORKDIR "/src/DishBurger"
+WORKDIR "/src"
 RUN dotnet build "DishBurger.csproj" -c Release -o /app/build
 
 FROM build AS publish
@@ -20,3 +18,4 @@ FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "DishBurger.dll"]
+

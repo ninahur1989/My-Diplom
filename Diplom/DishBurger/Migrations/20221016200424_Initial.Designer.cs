@@ -10,7 +10,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DishBurger.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20221016192117_Initial")]
+    [Migration("20221016200424_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
