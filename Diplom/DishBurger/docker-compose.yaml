@@ -17,4 +17,4 @@ services:
   identity-server: 
     image: identity-server
     ports:
-     - "56001:56001"
+     - "59001:59001"

@@ -17,6 +17,6 @@ RUN dotnet publish "WebApplication.Testing.Features.csproj" -c Release -o /app/p
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-EXPOSE 56001
+EXPOSE 59001
 ENTRYPOINT ["dotnet", "WebApplication.Testing.Features.dll"]
 

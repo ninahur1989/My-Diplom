@@ -50,17 +50,17 @@ namespace DishBurger.Controllers
                     var result = await _signInManager.PasswordSignInAsync(user, loginVM.Password, false, false);
                     if (result.Succeeded)
                     {
-                        //var response = await _authorizeService.GetTokenAsync();
-                        //var content = await response.Content.ReadAsStringAsync();
-                        //JObject json = JObject.Parse(content);
-                        //foreach (var item in json)
-                        //{
-                        //    if (item.Key == "access_token")
-                        //    {
-                        //        JwtToken.SetToken(item.Value.ToString());
-                        //        break;
-                        //    }
-                        //}
+                        var response = await _authorizeService.GetTokenAsync();
+                        var content = await response.Content.ReadAsStringAsync();
+                        JObject json = JObject.Parse(content);
+                        foreach (var item in json)
+                        {
+                            if (item.Key == "access_token")
+                            {
+                                JwtToken.SetToken(item.Value.ToString());
+                                break;
+                            }
+                        }
                         return RedirectToAction("Index", "Dishes");
                     }
                 }

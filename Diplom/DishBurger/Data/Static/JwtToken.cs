@@ -7,7 +7,7 @@ namespace DishBurger.Data.Static
 {
     public static class JwtToken
     {
-        public const string _tokenFilePath = @"C:\Users\Admin\Desktop\my-full-shop\Diplom\DishBurger\token.json";
+        public const string _tokenFilePath = @"token.json";
         public static string currentToken = GetToken();
 
         public static void SetToken(string token)

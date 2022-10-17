@@ -24,7 +24,7 @@ namespace WebApplication1.Testing.Features
                 .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
                 {
-                    options.Authority = "http://localhost:56001"; // Your Identity Server URL
+                    options.Authority = "http://localhost:59001"; // Your Identity Server URL
                     options.RequireHttpsMetadata = false;
                     options.TokenValidationParameters = new TokenValidationParameters
                     {

@@ -60,16 +60,16 @@ namespace DishBurger
             {
                 options.DefaultScheme = CookieAuthenticationDefaults.AuthenticationScheme;
             });
-            //services.AddAuthentication("Bearer")
-            // .AddJwtBearer("Bearer", options =>
-            // {
-            //     options.Authority = "http://localhost:56001";
-            //     options.RequireHttpsMetadata = false;
-            //     options.TokenValidationParameters = new TokenValidationParameters
-            //     {
-            //         ValidateAudience = false
-            //     };
-            // });
+            services.AddAuthentication("Bearer")
+             .AddJwtBearer("Bearer", options =>
+             {
+                 options.Authority = "http://localhost:56001";
+                 options.RequireHttpsMetadata = false;
+                 options.TokenValidationParameters = new TokenValidationParameters
+                 {
+                     ValidateAudience = false
+                 };
+             });
 
             services.AddControllersWithViews();
         }
@@ -92,12 +92,12 @@ namespace DishBurger
             app.UseRouting();
             app.UseSession();
 
-            //app.Use(async (c, n) =>
-            //{
-            //    c.Request.Headers.Add("Authorization", "Bearer " + JwtToken.currentToken);
+            app.Use(async (c, n) =>
+            {
+                c.Request.Headers.Add("Authorization", "Bearer " + JwtToken.currentToken);
 
-            //    await n.Invoke();
-            //});
+                await n.Invoke();
+            });
 
             app.UseAuthentication();
             app.UseAuthorization();
