@@ -61,26 +61,26 @@
             </div>
         </div>
     }
-    <footer>
-        <div style=" text-align:center;">
-            <span>
-                <a asp-action="Index"
-                   asp-route-pageNumber="@(Model.PageNumber - 1 == 0 ? Model.PageNumber:Model.PageNumber-1)"
-                   class="bi bi-chevron-left" style="background-color:darkorange;width:20%;text-align:center;padding:7px;"
-                   asp-route-SortPage="@ViewData["Sort"]"></a>
-            </span>
-            <span>
-                Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
-            </span>
-            <span>
-                <a asp-action="Index"
-                   asp-route-pageNumber="@(Model.PageNumber + 1 > Model.PageCount ? Model.PageNumber:Model.PageNumber+1)"
-                   class="bi bi-chevron-right" style="background-color:darkorange;width:20%;text-align:center;padding:7px;"
-                   asp-route-SortPage="@ViewData["Sort"]"></a>
-                </a>
-            </span>
-        </div>
-    </footer>
 </div>
+<footer>
+    <div style=" text-align:center;">
+        <span>
+            <a asp-action="Index"
+               asp-route-pageNumber="@(Model.PageNumber - 1 == 0 ? Model.PageNumber:Model.PageNumber-1)"
+               class="bi bi-chevron-left" style="background-color:darkorange;width:20%;text-align:center;padding:7px;"
+               asp-route-SortPage="@ViewData["Sort"]"></a>
+        </span>
+        <span>
+            Page @(Model.PageCount < Model.PageNumber ? 0 : Model.PageNumber)
+        </span>
+        <span>
+            <a asp-action="Index"
+               asp-route-pageNumber="@(Model.PageNumber + 1 > Model.PageCount ? Model.PageNumber:Model.PageNumber+1)"
+               class="bi bi-chevron-right" style="background-color:darkorange;width:20%;text-align:center;padding:7px;"
+               asp-route-SortPage="@ViewData["Sort"]"></a>
+            </a>
+        </span>
+    </div>
+</footer>
 
 @await Html.PartialAsync("_CreateItem", "Dishes") 
